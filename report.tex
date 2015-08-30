@@ -56,8 +56,22 @@ Diese impliziten Anforderungen bringen eine Reihe von Konsequenzen mit sich die 
 "Autopilot" ist eine Anwendung zum Verwalten von Daten. Dazu eignen sich Computer grundsätzlich besser als Menschen, da sie nicht müde werden und keine Flüchtigkeitsfehler machen. Die Daten zur Verarbeitung werden dennoch von Menschen eingegeben, wahrscheinlich mehrmals am Tag und wahrscheinlich nicht immer in ruhiger Atmosphäre.
 \newline
 
-Entsprechend war unser erstes Ziel dem Benutzer die Navigation im Programm und dessen Bedienung so leicht wie möglich zu machen. 
+Entsprechend war unser erstes Ziel dem Benutzer die Navigation im Programm und dessen Bedienung so leicht wie möglich zu machen. Wir haben dazu folgende Schwerpunkte erarbeitet:
+\begin{itemize}
+  \item Einfache Navigation in der Oberfläche
+  \item Für den aktuellen Vorgang unwichtige Informationen ausblenden
+  \item Komplexe Schritte in Teilschritte aufteilen
+\end{itemize}
 \newline
+
+Die meisten Benutzer sind sehr optisch veranlagt, weshalb wir uns in der Navigation darauf geeinigt haben Icons zu verwenden statt Text. Das erhöht die Wiedererkennung und beschleunigt die Suche nach dem richtigen Button, da nicht jede Aufschrift erst gelesen werden muss. Zudem variieren die Positionen der einzelnen Buttons nicht. Da sich nicht alle wesentlichen Elemente in der grafischen Opberfläche durch gängige Symbole ersetzen lassen, sollte in den entsprechenden Bereichen lieber eine gewöhnliche Schlatfläche mit sprechender Bezeichnung verwendet werden.
+\newline
+
+In der Oberfläche sollte es möglich sein die Stammdaten zu bearbeiten. Dazu soll jeder wesentliche Aspekt des Programms der in der Datenbank abgelegt wird auch aus der grafischen Oberfläche verfügbar sein. Diese Anforderung zog auch Anforderungen an die Datenbank nach sich, da dem Nutzer die Interna der gespeicherten Daten nicht offensichtlich werden sollten. Eine solche unnötige Komplexität für den Benutzer wollten wir ausblenden.
+\newline
+
+
+
 \subsection{Datenschutz}
 \subsection{Entwicklungsprozess}
 \subsection{Anwendungsumgebung}
