@@ -23,7 +23,7 @@
 
 \section{Problemstellung}
 
-Das betreiben eines Flugzeugcharters bringt hohe Anforderungen für Ressourcenverwaltung, Abrechnung und Durchführung mit sich. Um den vielfältigen Aufgaben möglichst einfach gerecht zu werden und dem Kunden höchste Qualität zu bieten ist der Einsatz von Software für diesen Zweck sinnvoll. Mit Autopilot haben wir eine Software erstellt die diesen Anforderungen gerecht werden soll.
+Das Betreiben eines Flugzeugcharters bringt hohe Anforderungen für Ressourcenverwaltung, Abrechnung und Durchführung mit sich. Um den vielfältigen Aufgaben möglichst einfach gerecht zu werden und dem Kunden höchste Qualität zu bieten ist der Einsatz von Software für diesen Zweck sinnvoll. Mit Autopilot haben wir eine Software erstellt die diesen Anforderungen gerecht werden soll.
 \newline
 
 Besonders wenn es um die tägliche Anwendung geht, sollte dabei der Benutzer so umstandslos wie möglich durch den Prozess geführt werden. Deshalb haben wir die Benutzeroberfläche mit besonderem Schwerpunkt auf die Bedienbarkeit gestaltet. Ein optimales Ergebnis wurde erzielt, wenn auch ein Kunde die Erstellung eines Auftrags ohne Hilfe durchführen kann. Dadurch wäre gewährleistet das die Bedienung intuitiv ist und die Interna der Verwaltung der Daten keine Rolle für den Benutzer spielt.
@@ -37,7 +37,7 @@ Da in professionellen Umgebungen mit Windows Betriebssystemen zu rechnen ist, wu
 \newpage
 \section{Anforderungen}
 
-"Autopilot" sollte eine Anwendung für die Planung, Durchführung und Abrechnung von Charterflügen sein. Die Erstellung von Flügen, dem Verwalten von entsprechenden Ressourcen und die automatische Abrechnung sind also die Kernfunktionen des Programms. Zusätzlich sollten Kunden und deren Zahlungen erfasst und verwaltet werden. Bei Zahlungsausfall war ein entsprechendes automatisches Mahnwesen gefordert. Kunden waren in verschiedene Kategorien einzuteilen die zusätzliche Eigenschaften mit sich bringen. Da fast alle Interaktion mit Kunden entsprechende Dokumente nach sich zieht, hatten wir dafür zu sorgen das auch diese ohne Zutun des Benutzers erstellt und von der Anwendung verwaltet wird.
+"Autopilot" sollte eine Anwendung für die Planung, Durchführung und Abrechnung von Charterflügen sein. Die Erstellung von Flügen, dem Verwalten von entsprechenden Ressourcen und die automatische Abrechnung sind also die Kernfunktionen des Programms. Zusätzlich sollten Kunden und deren Zahlungen erfasst und verwaltet werden. Bei Zahlungsausfall war ein entsprechendes automatisches Mahnwesen gefordert. Kunden waren in verschiedene Kategorien einzuteilen, die zusätzliche Eigenschaften mit sich bringen. Da fast alle Interaktion mit Kunden entsprechende Dokumente nach sich ziehen, hatten wir dafür zu sorgen das auch diese ohne Zutun des Benutzers erstellt und von der Anwendung verwaltet wird.
 \newline
 
 Nach langer Besprechnung zu den entsprechenden Anforderungsbereichen haben wir zusätzlich implizite Anforderungen indentifiziert:
@@ -49,7 +49,7 @@ Nach langer Besprechnung zu den entsprechenden Anforderungsbereichen haben wir z
 \end{itemize}
 \newline
 
-Diese impliziten Anforderungen bringen eine Reihe von Konsequenzen mit sich die nicht sofort offensichtlich sind und deshalb im Folgenden kurz erläutert werden sollen.
+Diese impliziten Anforderungen bringen eine Reihe von Konsequenzen mit sich, die nicht sofort offensichtlich sind und deshalb im Folgenden kurz erläutert werden sollen.
 
 \subsection{Benutzerfreundlichkeit}
 
@@ -67,10 +67,10 @@ Entsprechend war unser erstes Ziel dem Benutzer die Navigation im Programm und d
 Die meisten Benutzer sind sehr optisch veranlagt, weshalb wir uns in der Navigation darauf geeinigt haben Icons zu verwenden statt Text. Das erhöht die Wiedererkennung und beschleunigt die Suche nach dem richtigen Button, da nicht jede Aufschrift erst gelesen werden muss. Zudem variieren die Positionen der einzelnen Buttons nicht. Da sich nicht alle wesentlichen Elemente in der grafischen Oberfläche durch gängige Symbole ersetzen lassen, sollte in den entsprechenden Bereichen lieber eine gewöhnliche Schlatfläche mit sprechender Bezeichnung verwendet werden.
 \newline
 
-In der Oberfläche sollte es möglich sein die Stammdaten zu bearbeiten. Dazu soll jeder wesentliche Aspekt des Programms der in der Datenbank abgelegt wird auch aus der grafischen Oberfläche verfügbar sein. Diese Anforderung zog auch Anforderungen an die Datenbank nach sich, da dem Nutzer die Interna der gespeicherten Daten nicht offensichtlich werden sollten. Eine solche unnötige Komplexität für den Benutzer wollten wir ausblenden.
+In der Oberfläche sollte es möglich sein die Stammdaten zu bearbeiten. Dazu soll jeder wesentliche Aspekt des Programms der in der Datenbank abgelegt wird, auch aus der grafischen Oberfläche verfügbar sein. Diese Anforderung zog auch Anforderungen an die Datenbank nach sich, da dem Nutzer die Interna der gespeicherten Daten nicht offensichtlich werden sollten. Eine solche unnötige Komplexität für den Benutzer wollten wir ausblenden.
 \newline
 
-Die Funktion die über die Zeit am häufigsten genutzt werden dürfte, ist die Erstellung eines neuen Auftrags. Dieser Schritt umfasst die Erfassung des Kunden, die Auswahl der Route, die Zuteilung des benötigten Personals, die Feststellung der Verfügbarkeit aller Ressourcen, die Einordnung des Kunden in die entsprechende Kundenkategorie und die entsprechenden Abrechnungsmodalitäten des Auftrags. Da eine derartige Komplexität für einen Benutzer nicht leicht, wenn überhaupt, zu handhaben ist, sollte die grafische Benutzeroberfläche nicht auch noch zusätzliche Schwierigkeiten mit sich bringen. Einfache Lesbarkeit und fokussierte Schritte sollten dem Benutzer helfen den Auftrag zu erstellen. Entsprechend sollten die einzelnen Schritte des Auftrags nur Informationen und Eingabemasken anbieten die den aktuellen Schritt betreffen. Zwischen den einzelnen Schritten kann bis zum Ende der Erfassung des Auftrags beliebig hin und her gesprungen werden. Informationen die der Datenbank noch nicht bekannt sind werden automatisch erstellt, so das die Aufnahme neuer Kunden in die Datenbank der Auftragserstellung nicht hinderlich im Weg steht. Im Ergebnis soll der Prozess fließend von der Hand gehen und auch für Ungeübte nachvollziehbar sein.
+Die Funktion die über die Zeit am häufigsten genutzt werden dürfte, ist die Erstellung eines neuen Auftrags. Dieser Schritt umfasst die Erfassung des Kunden, die Auswahl der Route, die Zuteilung des benötigten Personals, die Feststellung der Verfügbarkeit aller Ressourcen, die Einordnung des Kunden in die entsprechende Kundenkategorie und die entsprechenden Abrechnungsmodalitäten des Auftrags. Da eine derartige Komplexität für einen Benutzer nicht leicht, wenn überhaupt, zu handhaben ist, sollte die grafische Benutzeroberfläche nicht auch noch zusätzliche Schwierigkeiten mit sich bringen. Einfache Lesbarkeit und fokussierte Schritte sollten dem Benutzer helfen den Auftrag zu erstellen. Entsprechend sollten die einzelnen Schritte des Auftrags nur Informationen und Eingabemasken anbieten die den aktuellen Schritt betreffen. Zwischen den einzelnen Schritten kann bis zum Ende der Erfassung des Auftrags beliebig hin und her gesprungen werden. Informationen die der Datenbank noch nicht bekannt sind, werden automatisch erstellt, so das die Aufnahme neuer Kunden in die Datenbank der Auftragserstellung nicht hinderlich im Weg steht. Im Ergebnis soll der Prozess fließend von der Hand gehen und auch für Ungeübte nachvollziehbar sein.
 
 \subsection{Datenschutz}
 
@@ -83,11 +83,11 @@ Zunächst sollte dazu die Kontrolle über Speicherort und Backup der Daten in Ih
 Ihnen ist damit die Möglichkeit gegeben Ihre Daten unter den Mitarbeitern zu teilen wenn sie wollen oder auf einem Einzelplatz zu arbeiten. Im Zeitalter der Cloudanbieter finden sich eine ganze Reihe von Diensten die Dateien automatisch auf angeschlossenen Geräten synchronisieren und die gleichzeitig als Backup zum Einsatz kommen können. Als Beispiel sei hier der Anbieter SpiderOak genannt, der ähnlich wie Dropbox arbeitet, jedoch auf Seite der Endbenutzer verschlüsselt und deshalb kein Wissen über die Inhalte der gespeicherten Daten erlangen kann.
 \newline 
 
-Durch diese einfachen Mechanismen obliegt es Ihren Präferenzen den Datenschutz sicherzustellen und die Aufwändige Implementierung einer zusätzlichen Infrastruktur kann entfallen. Mit der Variante eines Cloudanbieters wie SpiderOak wäre zusätzlich die Frage nach einem Backup und einem Mehrbenutzersystem geklärt. Wir beraten Sie gerne bei zusätzlichen Fragen in diesem Bereich.
+Durch diese einfachen Mechanismen obliegt es Ihren Präferenzen den Datenschutz sicherzustellen und die aufwändige Implementierung einer zusätzlichen Infrastruktur kann entfallen. Mit der Variante eines Cloudanbieters wie SpiderOak wäre zusätzlich die Frage nach einem Backup und einem Mehrbenutzersystem geklärt. Wir beraten Sie gerne bei zusätzlichen Fragen in diesem Bereich.
 
 \subsection{Entwicklungsprozess}
 
-Für ein schnelles Feedback und Ihre aktive Teilnahme an der Projektgestaltung haben wir Ihnen jederzeit offenen Zugriff auf alle unsere Quellen und Ergebnisse geben wollen. Auf diese Weise konnten Sie jederzeit korrigierend eingreifen wenn die Entwicklung eine falsche Richtung einschlug oder sie mit einem Zwischenstand nicht einverstanden waren. Wir möchten uns an dieser Stelle erneut für die Rege Teilnahme bedanken und haben uns gefreut das die von uns vorgeschlagenen Möglichkeiten von Ihnen zugelassen wurden. 
+Für ein schnelles Feedback und Ihre aktive Teilnahme an der Projektgestaltung haben wir Ihnen jederzeit offenen Zugriff auf alle unsere Quellen und Ergebnisse geben wollen. Auf diese Weise konnten Sie jederzeit korrigierend eingreifen, wenn die Entwicklung eine falsche Richtung einschlug oder sie mit einem Zwischenstand nicht einverstanden waren. Wir möchten uns an dieser Stelle erneut für die Rege Teilnahme bedanken und haben uns gefreut, dass die von uns vorgeschlagenen Möglichkeiten von Ihnen zugelassen wurden. 
 \newline
 
 Alle unsere Informationen sollten an zentraler Stelle zusammenlaufen. In unserem Fall war das der Slack Chat in dem für alle Teilnehmer offensichtlich wurde wer gerade an welchem Teil des Programms arbeitet. Hier sollten auch entsprechende Frage geklärt und die Ergebnisse diskutiert werden. Durch die Integration mit unserem Code-Host GitHub wurden auch die Nachrichten aus dem Issue-Tracker und der Codereview für alle sichtbar.
@@ -107,12 +107,11 @@ Um in diesen Belangen möglichst wenig selbst programmieren zu müssen und uns a
 Durch die Anforderungen einer transparenten Projektentwicklung haben wir uns für eine Entwickler-freundliche Umgebung entscheiden können. Zum Projekt gehören die folgenden Webseiten:
 
 \begin{itemize}
-  \item https://github.com/FlyHinotori - und die Repositories dieser GitHub Organistation, inklusive der dort verzeichneten issues und PullRequests
+  \item https://github.com/FlyHinotori und die Repositories dieser GitHub Organistation, inklusive der dort verzeichneten issues und PullRequests
   \item https://github.io/FlyHinotori/docs - Statische Webseite mit der Präsentation zum ersten Zwischenbericht
   \item https://github.io/FlyHinotori/docs2 - Statische Webseite mit der Präsentation zum zweiten Zwischenbericht
   \item https://ci.appveyor.com/project/HaMster21/autopilot - Mit den Ergebnissen der Continuous Integration
   \item https://hino.slack.com - Als Kommunikationszentrale
-  \item http://benutzerdoku.readthedocs.org/en/latest/index.html - Für die Benutzerdokumentation
 \end{itemize}
 
 \subsection{Aufgabenteilung}
