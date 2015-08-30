@@ -38,6 +38,7 @@ Da in professionellen Umgebungen mit Windows Betriebssystemen zu rechnen ist, wu
 \section{Anforderungen}
 
 "Autopilot" sollte eine Anwendung für die Planung, Durchführung und Abrechnungn von Charterflügen sein. Die Erstellung von Flügen, dem Verwalten von entsprechenden Ressourcen und die automatische Abrechnung sind also die Kernfunktionen des Programms. Zusätzlich sollten Kunden und deren Zahlungen erfasst und verwaltet werden. Bei Zahlungsausfall war ein entsprechendes automatisches Mahnwesen gefordert. Kunden waren in verschiedene Kategorien einzuteilen die zusätzliche Eigenschaften mit sich bringen. Da fast alle Interaktion mit Kunden entsprechende Dokumente nach sich zieht, hatten wir dafür zu sorgen das auch diese ohne Zutun des Benutzers erstellt und von der Anwendung verwaltet wird.
+\newline
 
 Nach langer Besprechnung zu den entsprechenden Anforderungsbereichen haben wir zusätzlich implizite Anforderungen indentifiziert:
 \begin{itemize}
@@ -46,8 +47,17 @@ Nach langer Besprechnung zu den entsprechenden Anforderungsbereichen haben wir z
   \item offener Entwicklungsprozess
   \item Verfügbarkeit in Standardumgebungen
 \end{itemize}
+\newline
+
+Diese impliziten Anforderungen bringen eine Reihe von Konsequenzen mit sich die nicht sofort offensichtlich sind und deshalb im Folgenden kurz erläutert werden sollen.
 
 \subsection{Benutzerfreundlichkeit}
+
+"Autopilot" ist eine Anwendung zum Verwalten von Daten. Dazu eignen sich Computer grundsätzlich besser als Menschen, da sie nicht müde werden und keine Flüchtigkeitsfehler machen. Die Daten zur Verarbeitung werden dennoch von Menschen eingegeben, wahrscheinlich mehrmals am Tag und wahrscheinlich nicht immer in ruhiger Atmosphäre.
+\newline
+
+Entsprechend war unser erstes Ziel dem Benutzer die Navigation im Programm und dessen Bedienung so leicht wie möglich zu machen. 
+\newline
 \subsection{Datenschutz}
 \subsection{Entwicklungsprozess}
 \subsection{Anwendungsumgebung}
