@@ -37,7 +37,7 @@ Da in professionellen Umgebungen mit Windows Betriebssystemen zu rechnen ist, wu
 \newpage
 \section{Anforderungen}
 
-"Autopilot" sollte eine Anwendung für die Planung, Durchführung und Abrechnungn von Charterflügen sein. Die Erstellung von Flügen, dem Verwalten von entsprechenden Ressourcen und die automatische Abrechnung sind also die Kernfunktionen des Programms. Zusätzlich sollten Kunden und deren Zahlungen erfasst und verwaltet werden. Bei Zahlungsausfall war ein entsprechendes automatisches Mahnwesen gefordert. Kunden waren in verschiedene Kategorien einzuteilen die zusätzliche Eigenschaften mit sich bringen. Da fast alle Interaktion mit Kunden entsprechende Dokumente nach sich zieht, hatten wir dafür zu sorgen das auch diese ohne Zutun des Benutzers erstellt und von der Anwendung verwaltet wird.
+"Autopilot" sollte eine Anwendung für die Planung, Durchführung und Abrechnung von Charterflügen sein. Die Erstellung von Flügen, dem Verwalten von entsprechenden Ressourcen und die automatische Abrechnung sind also die Kernfunktionen des Programms. Zusätzlich sollten Kunden und deren Zahlungen erfasst und verwaltet werden. Bei Zahlungsausfall war ein entsprechendes automatisches Mahnwesen gefordert. Kunden waren in verschiedene Kategorien einzuteilen die zusätzliche Eigenschaften mit sich bringen. Da fast alle Interaktion mit Kunden entsprechende Dokumente nach sich zieht, hatten wir dafür zu sorgen das auch diese ohne Zutun des Benutzers erstellt und von der Anwendung verwaltet wird.
 \newline
 
 Nach langer Besprechnung zu den entsprechenden Anforderungsbereichen haben wir zusätzlich implizite Anforderungen indentifiziert:
@@ -64,13 +64,13 @@ Entsprechend war unser erstes Ziel dem Benutzer die Navigation im Programm und d
 \end{itemize}
 \newline
 
-Die meisten Benutzer sind sehr optisch veranlagt, weshalb wir uns in der Navigation darauf geeinigt haben Icons zu verwenden statt Text. Das erhöht die Wiedererkennung und beschleunigt die Suche nach dem richtigen Button, da nicht jede Aufschrift erst gelesen werden muss. Zudem variieren die Positionen der einzelnen Buttons nicht. Da sich nicht alle wesentlichen Elemente in der grafischen Opberfläche durch gängige Symbole ersetzen lassen, sollte in den entsprechenden Bereichen lieber eine gewöhnliche Schlatfläche mit sprechender Bezeichnung verwendet werden.
+Die meisten Benutzer sind sehr optisch veranlagt, weshalb wir uns in der Navigation darauf geeinigt haben Icons zu verwenden statt Text. Das erhöht die Wiedererkennung und beschleunigt die Suche nach dem richtigen Button, da nicht jede Aufschrift erst gelesen werden muss. Zudem variieren die Positionen der einzelnen Buttons nicht. Da sich nicht alle wesentlichen Elemente in der grafischen Oberfläche durch gängige Symbole ersetzen lassen, sollte in den entsprechenden Bereichen lieber eine gewöhnliche Schlatfläche mit sprechender Bezeichnung verwendet werden.
 \newline
 
 In der Oberfläche sollte es möglich sein die Stammdaten zu bearbeiten. Dazu soll jeder wesentliche Aspekt des Programms der in der Datenbank abgelegt wird auch aus der grafischen Oberfläche verfügbar sein. Diese Anforderung zog auch Anforderungen an die Datenbank nach sich, da dem Nutzer die Interna der gespeicherten Daten nicht offensichtlich werden sollten. Eine solche unnötige Komplexität für den Benutzer wollten wir ausblenden.
 \newline
 
-
+Die Funktion die über die Zeit am häufigsten genutzt werden dürfte, ist die Erstellung eines neuen Auftrags. Dieser Schritt umfasst die Erfassung des Kunden, die Auswahl der Route, die Zuteilung des benötigten Personals, die Feststellung der Verfügbarkeit aller Ressourcen, die Einordnung des Kunden in die entsprechende Kundenkategorie und die entsprechenden Abrechnungsmodalitäten des Auftrags. Da eine derartige Komplexität für einen Benutzer nicht leicht, wenn überhaupt, zu handhaben ist, sollte die grafische Benutzeroberfläche nicht auch noch zusätzliche Schwierigkeiten mit sich bringen. Einfache Lesbarkeit und fokussierte Schritte sollten dem Benutzer helfen den Auftrag zu erstellen. Entsprechend sollten die einzelnen Schritte des Auftrags nur Informationen und Eingabemasken anbieten die den aktuellen Schritt betreffen. Zwischen den einzelnen Schritten kann bis zum Ende der Erfassung des Auftrags beliebing hin und her gesprungen werden. Informationen die der Datenbank noch nicht bekannt sind werden automatisch erstellt, so das die Aufnahme neuer Kunden in die Datenbank der Auftragserstellung nicht hinderlich im Weg steht. Im Ergebnis soll der Prozess fließend von der Hand gehen und auch für Ungeübte nachvollziehbar sein.
 
 \subsection{Datenschutz}
 \subsection{Entwicklungsprozess}
