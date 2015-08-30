@@ -37,10 +37,10 @@ Da in professionellen Umgebungen mit Windows Betriebssystemen zu rechnen ist, wu
 \newpage
 \section{Anforderungen}
 
-"Autopilot" sollte eine Anwendung für die Planung, Durchführung und Abrechnung von Charterflügen sein. Die Erstellung von Flügen, dem Verwalten von entsprechenden Ressourcen und die automatische Abrechnung sind also die Kernfunktionen des Programms. Zusätzlich sollten Kunden und deren Zahlungen erfasst und verwaltet werden. Bei Zahlungsausfall war ein entsprechendes automatisches Mahnwesen gefordert. Kunden waren in verschiedene Kategorien einzuteilen, die zusätzliche Eigenschaften mit sich bringen. Da fast alle Interaktion mit Kunden entsprechende Dokumente nach sich ziehen, hatten wir dafür zu sorgen das auch diese ohne Zutun des Benutzers erstellt und von der Anwendung verwaltet wird.
+"Autopilot" sollte eine Anwendung für die Planung, Durchführung und Abrechnung von Charterflügen sein. Die Erstellung von Flügen, dem Verwalten von entsprechenden Ressourcen und die automatische Abrechnung sind also die Kernfunktionen des Programms. Zusätzlich sollten Kunden und deren Zahlungen erfasst und verwaltet werden. Bei Zahlungsausfall war ein entsprechendes automatisches Mahnwesen gefordert. Kunden waren in verschiedene Kategorien einzuteilen, die zusätzliche Eigenschaften mit sich bringen. Da fast alle Interaktion mit Kunden entsprechende Dokumente nach sich ziehen, hatten wir dafür zu sorgen, dass auch diese ohne Zutun des Benutzers erstellt und von der Anwendung verwaltet wird.
 \newline
 
-Nach langer Besprechnung zu den entsprechenden Anforderungsbereichen haben wir zusätzlich implizite Anforderungen indentifiziert:
+Nach langer Besprechnung zu den entsprechenden Anforderungsbereichen haben wir zusätzlich implizite Anforderungen identifiziert:
 \begin{itemize}
   \item Benutzerfreundlichkeit
   \item Datenschutz
@@ -64,17 +64,17 @@ Entsprechend war unser erstes Ziel dem Benutzer die Navigation im Programm und d
 \end{itemize}
 \newline
 
-Die meisten Benutzer sind sehr optisch veranlagt, weshalb wir uns in der Navigation darauf geeinigt haben Icons zu verwenden statt Text. Das erhöht die Wiedererkennung und beschleunigt die Suche nach dem richtigen Button, da nicht jede Aufschrift erst gelesen werden muss. Zudem variieren die Positionen der einzelnen Buttons nicht. Da sich nicht alle wesentlichen Elemente in der grafischen Oberfläche durch gängige Symbole ersetzen lassen, sollte in den entsprechenden Bereichen lieber eine gewöhnliche Schlatfläche mit sprechender Bezeichnung verwendet werden.
+Die meisten Benutzer sind sehr optisch veranlagt, weshalb wir uns in der Navigation darauf geeinigt haben Icons zu verwenden statt Text. Das erhöht die Wiedererkennung und beschleunigt die Suche nach dem richtigen Button, da nicht jede Aufschrift erst gelesen werden muss. Zudem variieren die Positionen der einzelnen Buttons nicht. Da sich nicht alle wesentlichen Elemente in der grafischen Oberfläche durch gängige Symbole ersetzen lassen, sollte in den entsprechenden Bereichen lieber eine gewöhnliche Schaltfläche mit sprechender Bezeichnung verwendet werden.
 \newline
 
 In der Oberfläche sollte es möglich sein die Stammdaten zu bearbeiten. Dazu soll jeder wesentliche Aspekt des Programms der in der Datenbank abgelegt wird, auch aus der grafischen Oberfläche verfügbar sein. Diese Anforderung zog auch Anforderungen an die Datenbank nach sich, da dem Nutzer die Interna der gespeicherten Daten nicht offensichtlich werden sollten. Eine solche unnötige Komplexität für den Benutzer wollten wir ausblenden.
 \newline
 
-Die Funktion die über die Zeit am häufigsten genutzt werden dürfte, ist die Erstellung eines neuen Auftrags. Dieser Schritt umfasst die Erfassung des Kunden, die Auswahl der Route, die Zuteilung des benötigten Personals, die Feststellung der Verfügbarkeit aller Ressourcen, die Einordnung des Kunden in die entsprechende Kundenkategorie und die entsprechenden Abrechnungsmodalitäten des Auftrags. Da eine derartige Komplexität für einen Benutzer nicht leicht, wenn überhaupt, zu handhaben ist, sollte die grafische Benutzeroberfläche nicht auch noch zusätzliche Schwierigkeiten mit sich bringen. Einfache Lesbarkeit und fokussierte Schritte sollten dem Benutzer helfen den Auftrag zu erstellen. Entsprechend sollten die einzelnen Schritte des Auftrags nur Informationen und Eingabemasken anbieten die den aktuellen Schritt betreffen. Zwischen den einzelnen Schritten kann bis zum Ende der Erfassung des Auftrags beliebig hin und her gesprungen werden. Informationen die der Datenbank noch nicht bekannt sind, werden automatisch erstellt, so das die Aufnahme neuer Kunden in die Datenbank der Auftragserstellung nicht hinderlich im Weg steht. Im Ergebnis soll der Prozess fließend von der Hand gehen und auch für Ungeübte nachvollziehbar sein.
+Die Funktion die über die Zeit am häufigsten genutzt werden dürfte, ist die Erstellung eines neuen Auftrags. Dieser Schritt umfasst die Erfassung des Kunden, die Auswahl der Route, die Zuteilung des benötigten Personals, die Feststellung der Verfügbarkeit aller Ressourcen, die Einordnung des Kunden in die entsprechende Kundenkategorie und die entsprechenden Abrechnungsmodalitäten des Auftrags. Da eine derartige Komplexität für einen Benutzer nicht leicht, wenn überhaupt, zu handhaben ist, sollte die grafische Benutzeroberfläche nicht auch noch zusätzliche Schwierigkeiten mit sich bringen. Einfache Lesbarkeit und fokussierte Schritte sollten dem Benutzer helfen den Auftrag zu erstellen. Entsprechend sollten die einzelnen Schritte des Auftrags nur Informationen und Eingabemasken anbieten die den aktuellen Schritt betreffen. Zwischen den einzelnen Schritten kann bis zum Ende der Erfassung des Auftrags beliebig hin und her gesprungen werden. Informationen die der Datenbank noch nicht bekannt sind, werden automatisch erstellt, sodass die Aufnahme neuer Kunden in die Datenbank der Auftragserstellung nicht hinderlich im Weg steht. Im Ergebnis soll der Prozess fließend von der Hand gehen und auch für Ungeübte nachvollziehbar sein.
 
 \subsection{Datenschutz}
 
-Kundendaten, Geschäftsgeheimnisse oder Liquiditätsinformationen werden heutezutage häufiger Ziel von Hackerangriffen. Auch die beste Cloudinfrastruktur ist davor nicht geschützt und so haben wir uns überlegt wie wir diese Informationen so gut wie möglich schützen können.
+Kundendaten, Geschäftsgeheimnisse oder Liquiditätsinformationen werden heutzutage häufiger Ziel von Hackerangriffen. Auch die beste Cloudinfrastruktur ist davor nicht geschützt und so haben wir uns überlegt wie wir diese Informationen so gut wie möglich schützen können.
 \newline
 
 Zunächst sollte dazu die Kontrolle über Speicherort und Backup der Daten in Ihrer Hand liegen und nicht in unserer. Zudem sollte ein einfaches Format den Austausch der Datenbank erleichtern.
@@ -97,9 +97,9 @@ Für das kontinuierliche Testen des Programms wollten wir einen Continuous Integ
 
 \subsection{Anwendungsumgebung}
 
-Eine Festlegung auf ein bestimmtes Betriebssystem am Anfang eines Projekts ist nicht immer notwendig, kann die Entwicklung aber wesentlich beschleunigen. Wir hatten in Absprache mit Ihnen am Anfang festgelegt, dass nur Windows-Umgebungen in Frage kommen. Wir wollten dabei möglichst viele verschiede Windows Varianten unterstützen, Zukünftige wie auch Veraltete. Ausserdem sollte die grafische Oberfläche sich wenigstens generell an die gängigen Annahmen der Windows-Plattform halten.
+Eine Festlegung auf ein bestimmtes Betriebssystem am Anfang eines Projekts ist nicht immer notwendig, kann die Entwicklung aber wesentlich beschleunigen. Wir hatten in Absprache mit Ihnen am Anfang festgelegt, dass nur Windows-Umgebungen in Frage kommen. Wir wollten dabei möglichst viele verschiede Windows Varianten unterstützen, Zukünftige wie auch Veraltete. Außerdem sollte die grafische Oberfläche sich wenigstens generell an die gängigen Annahmen der Windows-Plattform halten.
 
-Um in diesen Belangen möglichst wenig selbst programmieren zu müssen und uns auf die wesentlichen Inhalte konzentrieren zu können, haben wir uns für das .NET Framework 4.5 als Laufzeitumgebung geeinigt. Dieses ist auf allen aktuellen Windows Varianten lauffähig und wird auch von zukünfigten Windows Generationen noch unterstützt werden. Es ist hinreichend schnell und bietet für viele alltägliche Programmieraufgaben bereits gute Abstraktionen.
+Um in diesen Belangen möglichst wenig selbst programmieren zu müssen und uns auf die wesentlichen Inhalte konzentrieren zu können, haben wir uns für das .NET Framework 4.5 als Laufzeitumgebung geeinigt. Dieses ist auf allen aktuellen Windows Varianten lauffähig und wird auch von zukünftigen Windows Generationen noch unterstützt werden. Es ist hinreichend schnell und bietet für viele alltägliche Programmieraufgaben bereits gute Abstraktionen.
 
 \newpage
 \section{Projektumgebung}
@@ -107,7 +107,7 @@ Um in diesen Belangen möglichst wenig selbst programmieren zu müssen und uns a
 Durch die Anforderungen einer transparenten Projektentwicklung haben wir uns für eine Entwickler-freundliche Umgebung entscheiden können. Zum Projekt gehören die folgenden Webseiten:
 
 \begin{itemize}
-  \item \url{https://github.com/FlyHinotori - und die Repositories dieser GitHub Organistation, inklusive der dort verzeichneten issues und PullRequests
+  \item \url{https://github.com/FlyHinotori - und die Repositories dieser GitHub Organistation, inklusive der dort verzeichneten Issues und PullRequests
   \item \url{https://github.io/FlyHinotori/docs} - Statische Webseite mit der Präsentation zum ersten Zwischenbericht
   \item \url{https://github.io/FlyHinotori/docs2} - Statische Webseite mit der Präsentation zum zweiten Zwischenbericht
   \item \url{https://ci.appveyor.com/project/HaMster21/autopilot} - Mit den Ergebnissen der Continuous Integration
