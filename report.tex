@@ -73,6 +73,18 @@ In der Oberfläche sollte es möglich sein die Stammdaten zu bearbeiten. Dazu so
 Die Funktion die über die Zeit am häufigsten genutzt werden dürfte, ist die Erstellung eines neuen Auftrags. Dieser Schritt umfasst die Erfassung des Kunden, die Auswahl der Route, die Zuteilung des benötigten Personals, die Feststellung der Verfügbarkeit aller Ressourcen, die Einordnung des Kunden in die entsprechende Kundenkategorie und die entsprechenden Abrechnungsmodalitäten des Auftrags. Da eine derartige Komplexität für einen Benutzer nicht leicht, wenn überhaupt, zu handhaben ist, sollte die grafische Benutzeroberfläche nicht auch noch zusätzliche Schwierigkeiten mit sich bringen. Einfache Lesbarkeit und fokussierte Schritte sollten dem Benutzer helfen den Auftrag zu erstellen. Entsprechend sollten die einzelnen Schritte des Auftrags nur Informationen und Eingabemasken anbieten die den aktuellen Schritt betreffen. Zwischen den einzelnen Schritten kann bis zum Ende der Erfassung des Auftrags beliebing hin und her gesprungen werden. Informationen die der Datenbank noch nicht bekannt sind werden automatisch erstellt, so das die Aufnahme neuer Kunden in die Datenbank der Auftragserstellung nicht hinderlich im Weg steht. Im Ergebnis soll der Prozess fließend von der Hand gehen und auch für Ungeübte nachvollziehbar sein.
 
 \subsection{Datenschutz}
+
+Kundendaten, Geschäftsgeheimnisse oder Liquiditätsinformationen werden heutezutage häufiger Ziel von Hackerangriffen. Auch die beste Cloudinfrastruktur ist davor nicht geschützt und so haben wir uns überlegt wie wir diese Informationen so gut wie möglich schützen können.
+\newline
+
+Zunächst sollte dazu die Kontrolle über Speicherort und Backup der Daten in Ihrer Hand liegen und nicht in unserer. Zudem sollte ein einfaches Format den Austausch der Datenbank erleichtern.
+\newline
+
+Ihnen ist damit die Möglichkeit gegeben Ihre Daten unter den Mitarbeitern zu teilen wenn sie wollen oder auf einem Einzelplatz zu arbeiten. Im Zeitalter der Cloudanbieter finden sich eine ganze Reihe von Diensten die Dateien automatisch auf angeschlossenen Geräten synchronisieren und die gleichzeitig als Backup zum Einsatz kommen können. Als Beispiel sei hier der Anbieter SpiderOak genannt, der ähnlich wie Dropbox arbeitet, jedoch auf Seite der Endbenutzer verschlüsselt und deshalb kein Wissen über die Inhalte der gespeicherten Daten erlangen kann.
+\newline 
+
+Durch diese einfachen Mechanismen obliegt es Ihren Präferenzen den Datenschutz sicherzustellen und die Aufwändige Implenetierung einer zusätzlichen Infrastruktur kann entfallen. Mit der Variante eines Cloudanbieters wie SpiderOak wäre zusätzlich die Frage nach einem Backup und einem Mehrbenutzersystem geklärt. Wir beraten Sie gerne bei zusätzlichen Fragen in diesem Bereich.
+
 \subsection{Entwicklungsprozess}
 \subsection{Anwendungsumgebung}
 
