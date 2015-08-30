@@ -110,6 +110,14 @@ Um in diesen Belangen möglichst wenig selbst programmieren zu müssen und uns a
 \subsection{Planung}
 \subsection{Durchführungsprobleme und Lösungen}
 
+Zu Beginn des Projekts haben wir begonnen eine Windows Universal-App zu programmieren. Dieser Projekttyp ist erst seit Oktober 2014 verfügbar und soll laut Microsoft Apps für alle Geräte ermöglichen. Die Unterscheidung zwischen Windows und Windows Phone würde dabei zum Beispiel entfallen, Universal-Apps während auf beiden Arten von Betriebssystemen lauffähig. Dieser Projekttyp nutzt ebenfalls ein installiertes .NET Framework als Laufzeitumgebung und kann folglich auch mit allen Programmiersprachen umgehen die mit dem .NET zusammenarbeiten.
+\newline
+
+Da aber die Annahmen der Plattformen mobiler Geräte schon erheblich verschieden von den Desktop-Plattformen sind, gibt es einige Einschränkungen bei diesem Projekttyp. Zusätzlich sind auch Plattformen als Ziel für Windows Universal-Apps geplant die heute noch keine Rolle spielen. Virtual-Reality-Brillen beispielsweise. Auf derartigen Geräten und Smartphones ist ein Deployment einer Datenbank undenkbar. Entsprechend sind für Windows Universal-Apps einige unserer Kernkomponenten nicht verfügbar. Es fehlt zum Beispiel das Entity-Framework und die Windows Presentation Foundation classes.
+\newline
+
+Nach vielen Untersuchungen wie man diese Einschränkungen umgehen kann und der Auswahl einer Reihe von alternativen Komponenten sind wir zu dem Entschluss gekommen eine klassische WPF-Anwendung zu erstellen. Diese ist zwar nicht so flexibel, bietet aber alle Funktionalitäten die man für eine zügige Entwicklung brauchen kann. Damit konnten wir dann auch entsprechend schnell Ergebnisse liefern ohne das wir uns Aufwändig mit der Dokumentation befassen mussten. Diese ist für Windows Universal-Apps derzeit noch sehr unstrukturiert, wenn überhaupt vorhanden. Unsere gewünschten Schnittstellenbibliotheken stehen für WPF-Anwendungen alle zur Verfügung und die Dokumentation dieser Plattform ist sehr gut.
+
 \newpage
 \section{Dokumentation}
 
